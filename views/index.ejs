@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <section class="top-banner">
+    <div class="container">
+      <h1 class="heading">Weather App</h1>
+      <form action="/" method="POST">
+        <input type="text" name ="city" placeholder="Search for a city" autofocus>
+        <span class="msg"></span>
+      </form>
+
+      <div class="result">
+        <% if(temp !== null)  {%>
+          <h1 class="temp"><%= temp %> F</h1>
+        <% } %>
+  
+        <div class="icon-des">
+          <% if(icon !== null)  {%>
+            <img class="icon" src="http://openweathermap.org/img/w/<%= icon %>.png" alt="">
+          <% } %>
+          <% if(des !== null)  {%>
+            <h3><%= des %></h3>
+          <% } %>
+        </div>
+  
+        <% if(city !== null)  {%>
+          <p class="city"><%= city %></p>
+        <% } %>
+        
+      </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="ajax-section">
+    <div class="container">
+      <ul class="cities"></ul>
+    </div>
+  </section>
+  <footer class="page-footer">
+    </div>
+  </footer>
+    
+</body>
+</html>
